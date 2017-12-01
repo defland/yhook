@@ -5,8 +5,7 @@ app = Flask(__name__)
 import commands,os
 
 # 全局变量
-
-# learoom项目系统路径
+# 项目系统路径
 PROJECT_A_PATH = '/home/yg/www/learoom_dev/'
 PROJECT_A_DEV_PATH = '/Users/yg/Documents/code/Project/learoom_dev/'
 
