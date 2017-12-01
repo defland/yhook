@@ -6,9 +6,16 @@
 # Keyword
   
   Yhook：
-  CentOS环境 + Flask（接受webhook POST消息）+ gunicorn（部署flask） + Nginx(反向代理)
+  CentOS + Flask+ gunicorn + Nginx
+  
+  基本流程（本地开发->github仓库->外网服务器）：
+  
+  1、本地开发完成，推送Master分支
+  2、github触发webhook消息，推送一条request(POST)推送到某个URL(用Yhook就是为了生成这条接收URL)上，告知有代码更新
+  3、Yhook服务接收到消息，执行本地shell脚本（git pull、重启web服务等操作）
+  4、从而实现推送即部署。
 
 # 实现需求
 
-- 生成Payload URL，接受github推送的JSON消息
-- 收到webhook JSON消息后，执行本地脚本（更新代码，重启web服务）
+- 生成Payload URL，接受github推送的JSON消息。
+- 收到webhook JSON消息后，执行本地脚本（更新代码，重启web服务）。
