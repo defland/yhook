@@ -10,10 +10,10 @@
   
   基本流程（本地开发->github仓库->外网服务器）：
   
-  1、本地开发完成，推送Master分支
-  2、github触发webhook消息，推送一条request(POST)推送到某个URL(用Yhook就是为了生成这条接收URL)上，告知有代码更新
-  3、Yhook服务接收到消息，执行本地shell脚本（git pull、重启web服务等操作）
-  4、从而实现推送即部署。
+  1. 本地开发完成，推送Master分支
+  2. github触发webhook消息，推送一条request(POST)推送到某个URL(用Yhook就是为了生成这条接收URL)上，告知有代码更新
+  3. Yhook服务接收到消息，执行本地shell脚本（git pull、重启web服务等操作）
+  4. 从而实现推送即部署。
 
 # 实现需求
 
