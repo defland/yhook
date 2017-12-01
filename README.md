@@ -8,7 +8,7 @@
   Yhook：
   CentOS环境 + Flask（接受webhook POST消息）+ gunicorn（部署flask） + Nginx(反向代理)
 
-# 实现功能
+# 实现需求
 
 - 生成Payload URL，接受github推送的JSON消息
-- 收到webhook JSON消息后，执行本地脚本（更新代码，重启服务器）
+- 收到webhook JSON消息后，执行本地脚本（更新代码，重启web服务）
