@@ -28,9 +28,6 @@ def learoom():
     if request.method == "GET":
         return "pelase use POST"
 
-    # x = request.form
-    # print x
-    # x = str(x)
     
     print "pull code ing ...."
     # 拉取代码和重启web服务
