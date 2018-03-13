@@ -19,3 +19,6 @@
 
 - 生成Payload URL，接受github推送的JSON消息。
 - 收到webhook JSON消息后，执行本地脚本（更新代码，重启web服务）。
+
+
+
