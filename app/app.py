@@ -122,5 +122,5 @@ def restart_server(comm=''):
 
 if __name__ == '__main__':
    
-    app.run(DEBUG = True)
+    app.run(port=8888,host='0.0.0.0')
 
