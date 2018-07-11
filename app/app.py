@@ -6,23 +6,23 @@ import commands,os
 
 # 全局变量
 # 项目系统路径
-PROJECT_A_PATH = '/home/yg/www/learoom_dev/'
+PROJECT_A_PATH = '/root/www/pandadex_stable/'
 PROJECT_A_DEV_PATH = '/Users/yg/Documents/code/Project/learoom_dev/'
 
-PROJECT_B_PATH = '/home/yg/server/Yhook'
+PROJECT_B_PATH = '/root/server/Yhook'
 PROJECT_B_DEV_PATH = '/Users/yg/Documents/code/Project/Yhook'
 
-PROJECT_DEV_PATH = '/home/yg/www/learoom_stable/'
+PROJECT_DEV_PATH = '/root/www/pandadex_dev/'
 PROJECT_STABLE_PATH = '/home/yg/www/learoom_stable/'
 
-SYSTEMD_PROJECT_A = 'learoom_dev.service' # web网站项目的自启动服务名称
+SYSTEMD_PROJECT_A = 'pandadex_stable.service' # web网站项目的自启动服务名称
 SYSTEMD_PROJECT_B = 'yhook.service' # yhook的自启动服务名
-SYSTEMD_PROJECT_STABLE = 'learoom_stable.service' # 稳定业务服务
+SYSTEMD_PROJECT_STABLE = 'pandadex_dev.service' # 稳定业务服务
 
 # 负责项目A的消息接受,webhook的路径 域名:端口/learoom
 @app.route('/',methods=['POST','GET'],strict_slashes=False)
 @app.route('/index',methods=['POST','GET'],strict_slashes=False)
-@app.route('/learoom_dev',methods=['POST','GET'],strict_slashes=False)
+@app.route('/pandadex',methods=['POST','GET'],strict_slashes=False)
 def learoom():
 
     if request.method == "GET":
